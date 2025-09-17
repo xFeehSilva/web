@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+<meta charset="utf-8">
+<title>Feeh Silva</title>
+<style type="text/css">
+  :root {
+    --site-max-width: 910px;
+    --inner-max-width: 707px;
+    --bg: #C6C4CC;
+  }
+
+  /* reset básico */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background-color: var(--bg);
+    font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* tamanho responsivo: maior em desktop, menor em celular */
+    font-size: clamp(16px, 1.9vw, 25px);
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    overflow-x: hidden; /* evita scroll horizontal */
+  }
+
+  /* centraliza o site e limita largura máxima */
+  /* Estilizamos pelo atributo original width para não mudar a estrutura */
+  table[width="910"] {
+    width: 100%;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  /* Tabela interna das artes (aquela com width="707") */
+  table[width="707"] {
+    width: 100%;
+    max-width: var(--inner-max-width);
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  /* Garante que imagens nunca quebrem a tela */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* células e textos */
+  td {
+    vertical-align: middle;
+    padding: 6px;
+  }
+
+  .art-info, .art-info1 {
+    padding: 8px;
+    text-align: center;
+    /* fonte responsiva para legibilidade */
+    font-size: clamp(14px, 1.6vw, 25px);
+  }
+
+  .art-price {
+    font-weight: bold;
+    color: #1F9425;
+  }
+
+  .art-item {
+    width: 100%;
+    background-color: #E4E4E4;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+
+  /* Override de larguras fixas (atributos width) para evitar força de layout */
+  table[width], td[width], img[width] {
+    /* não removemos atributos HTML — apenas sobrescrevemos o comportamento com CSS */
+    width: auto;
+  }
+
+  /* GALERIA: por padrão (desktop) cada linha com 2 colunas
+     Vamos dar uma largura aproximada para as TD dentro da tabela 707 (melhora legibilidade em larguras maiores) */
+  table[width="707"] td {
+    width: 50%;
+  }
+
+  /* Navegação (as 5 imagens de 177px) - manterem alinhadas no desktop */
+  table[width="910"] > tbody > tr:nth-child(2) td {
+    padding: 6px;
+  }
+
+  /* Banner/header e barra de loja: garantir escala */
+  table[width="910"] td[colspan="5"] img {
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+  }
+
+  /* --- Ajustes específicos para telas pequenas (mobile) --- */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px; /* base menor para caber melhor */
+    }
+
+    /* Galeria: empilha as colunas (mantendo as tabelas) */
+    table[width="707"] td {
+      display: block;         /* cada célula vira bloco empilhado */
+      width: 100% !important; /* força 100% na mobile */
+      padding: 10px 8px;
+    }
+
+    /* Faz o <tr> ter espaçamento visual entre itens da galeria */
+    table[width="707"] tr {
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    /* Navegação (linha com 5 botões) -> empilha verticalmente no celular */
+    table[width="910"] > tbody > tr:nth-child(2) td {
+      display: block;
+      width: 100% !important;
+      padding: 6px 0;
+    }
+
+    /* Ajuste do banner menor (capas e lp) */
+    table[width="910"] td[colspan="5"] img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Ajustes de fonte para info */
+    .art-info, .art-info1 {
+      font-size: clamp(13px, 2.4vw, 18px);
+      padding: 8px 6px;
+    }
+
+    /* Links "Clique aqui" centrados e fáceis de tocar */
+    a {
+      word-break: break-word;
+    }
+  }
+
+  /* Segurança extra: evita que qualquer elemento crie overflow horizontal */
+  @media (max-width: 420px) {
+    html, body { overflow-x: hidden; }
+  }
+
+</style>
+</head>
+
+<body>
+<table width="910" border="0" align="center" cellpadding="3" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="104" colspan="5" align="center" valign="middle"><img src="capa.png" width="900" height="250" alt=""/></td>
+    </tr>
+    <tr>
+      <td width="177" height="32" align="center" valign="middle"><a href="https://discord.com/invite/BhmmnxmBDN"><img src="pg6!.png" width="177" height="40" alt=""/></a></td>
+      <td width="177" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/sobre.htm"><img src="pg2!.png" width="177" height="40" alt=""/></a></td>
+      <td width="177" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/"><img src="pg1!.png" width="177" height="40" alt=""/></a></td>
+      <td width="177" height="32" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/trabalhos.htm"><img src="pg3!.png" width="177" height="40" alt=""/></a></td>
+      <td width="177" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/livestreams.htm"><img src="pg4!.png" width="177" height="40" alt=""/></a></td>
+    </tr>
+    <tr>
+      <td height="32" colspan="5" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/lojadepremios.htm"><img src="lp!.png" width="900" height="40" alt=""/></a></td>
+    </tr>
+    <tr>
+      <td height="5530" colspan="5" align="center" valign="middle" bgcolor="#FFFFFF"><table width="707" border="0" align="center" cellpadding="5">
+        <tbody>
+          <tr>
+            <td width="350" align="center" valign="middle"><img src="1.png" width="350" height="350" alt=""/></td>
+            <td width="347" align="center" valign="middle"><img src="2.png" width="350" height="350" alt=""/></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9" class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9" class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 10,00</span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 10,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.la/2w4t4WE">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.la/14DUKHK">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><img src="3.png" width="350" height="350" alt=""/></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="4.png" alt="Arte 4"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 10,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 10,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.la/2k9i5nx">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.la/21zbGg1">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="5.png" alt="Arte 5"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="6.png" alt="Arte 6"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 50,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 30,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/1goHFGJ">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/1jrq9aJ">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="7.png" alt="Arte 7"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="8.png" alt="Arte 8"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 20,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 80,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.la/2zWkwxu">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/2s7dKHh">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="9.png" alt="Arte 9"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="10.png" alt="Arte 10"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 100,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 80,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/1uTPuAN">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/23XKBAH">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="11.png" alt="Arte 11"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="12.png" alt="Arte 12"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 50,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 30,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/2TMyf57">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/2v7RZz5">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="13.png" alt="Arte 13"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="14.png" alt="Arte 14"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 500,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 500,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/2pgaEPY">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/2qLJCGZ">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="15.png" alt="Arte 15"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="16.png" alt="Arte 16"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 80,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 70,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/1ssVW26">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/12kqXo9">Clique aqui</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="17.png" alt="Arte 17"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="18.png" alt="Arte 18"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 50,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 50,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E9E9E9">&nbsp;</td>
+            <td height="50" align="center" valign="middle" bgcolor="#E9E9E9">&nbsp;</td>
+            </tr>
+          <tr>
+            <td align="center" valign="middle"><span class="art-item"><img src="19.png" alt="Arte 19"/></span></td>
+            <td align="center" valign="middle"><span class="art-item"><img src="20.png" alt="Arte 20"/></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info"><span style="font-weight: bold">Dimensões:</span> <span style="font-weight: normal">350px x 350px</span><br>
+              <span style="font-weight: bold">Formato:</span> <span style="font-weight: normal">PNG</span></span></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 150,00</span></span></td>
+            <td align="center" valign="middle" bgcolor="#E9E9E9"><span class="art-info1">Adquirir arte<br>
+                <span style="font-weight: normal">(SEM marca d'água)</span><br>
+              <span class="art-price">R$ 100,00</span></span></td>
+          </tr>
+          <tr>
+            <td height="50" align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/28aCgf2">Clique aqui</a></td>
+            <td align="center" valign="middle" bgcolor="#E5EFF1"><a href="https://mpago.li/23phDGw">Clique aqui</a></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+    <tr>
+      <td height="51" colspan="5" align="center" valign="middle" bgcolor="#FFFFFF"><strong><a href="https://xfeehsilva.github.io/web/termosecondicoesdeuso.htm">Termos e condições de uso</a></strong></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
