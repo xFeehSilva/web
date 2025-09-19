@@ -5,119 +5,278 @@
 <meta charset="utf-8">
 <title>Feeh Silva</title>
 <style type="text/css">
+/* Reset / segurança contra scroll lateral */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* impede scroll lateral */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+/* Box sizing para todo mundo */
+*, *:before, *:after { box-sizing: inherit; }
+
+/* Estilo base */
 body {
-    background-color: #C6C4CC;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* impede scroll lateral */
-    text-align: center;
-    font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 20px; /* tamanho base desktop */
-    line-height: 1.6; /* aumenta espaçamento para facilitar leitura */
+  background-color: #C6C4CC;
+  text-align: center;
+  font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
+  /* Tamanho base no desktop: igual ao seu original (legível em PC) */
+  font-size: 25px;
+  line-height: 1.55;
 }
 
-/* Faz tabelas ocuparem a largura máxima sem passar da tela */
-table {
-    max-width: 100%;
-    width: 100%;
-    border-collapse: collapse;
+/* Container central que respeita largura máxima original (910px) */
+.page {
+  width: 100%;
+  max-width: 910px; /* largura original do seu layout */
+  margin: 0 auto;
+  padding: 8px;
 }
 
-/* Garante que imagens se ajustem ao tamanho da tela */
-img {
-    max-width: 100%;
-    height: auto;
+/* Tabelas: responsivas mantendo estrutura */
+.responsive-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* Texto dentro das células nunca quebra layout */
-td {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    padding: 10px;
+/* Garante que imagens nunca estouram a largura */
+.responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
 
-/* Ajustes para telas menores (mobile) */
+/* Células: permitem quebra de palavras sem gerar overflow */
+.responsive-table td {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 6px 8px;
+  vertical-align: middle;
+}
+
+/* Pequenos ajustes visuais */
+a img { border: 0; }
+
+/* NAV row (os botões) — mantêm proporção no mobile */
+.nav-row td { padding: 4px; }
+
+/* Media queries para mobile — AUMENTA a fonte e espaçamento para leitura */
+@media (max-width: 1024px) {
+  body { font-size: 24px; }
+}
+
 @media (max-width: 768px) {
-    body {
-        font-size: 22px; /* texto bem maior no celular */
-    }
-    td {
-        display: block;
-        width: 100%;
-        text-align: left; /* alinhado à esquerda para leitura mais natural */
-    }
-    p {
-        font-size: 22px;
-        line-height: 1.8; /* mais espaçamento entre linhas no mobile */
-    }
+  /* Fonte grande e legível no celular */
+  body { font-size: 24px; line-height: 1.7; }
+
+  /* Mantém tabelas fluídas sem alterar a estrutura de tabela */
+  .responsive-table, .responsive-table table {
+    width: 100% !important;
+    table-layout: auto; /* permite colunas fluírem */
+  }
+
+  /* As imagens da navegação ficam em largura proporcional (cada botão) */
+  .nav-row td img {
+    max-width: 160px; /* evita que os botões fiquem minúsculos ou exagerados */
+    width: 100%;
+    height: auto;
+  }
+
+  /* Imagem de capa sempre encaixa */
+  .cover { max-width: 100%; width: 100%; height: auto; display:block; }
+
+  /* Textos dentro de células com alinhamento mais natural no mobile */
+  .responsive-table td { text-align: left; padding: 10px 6px; }
+
+  /* Pequeno espaçamento entre blocos grandes */
+  .spacer { height: 14px; display:block; }
+}
+
+/* Segurança extra: caso alguma tag tenha width="900" ou similar, forçamos o redimensionamento */
+img[width], table[width], td[width] {
+  max-width: 100%;
+  width: auto;
 }
 </style>
 </head>
 
 <body>
-<table border="0" align="center" cellpadding="3" cellspacing="0">
-  <tbody>
-    <tr>
-      <td colspan="5" align="center" valign="middle"><img src="capa.png" alt=""/></td>
-    </tr>
-    <tr>
-      <td><a href="https://discord.com/invite/BhmmnxmBDN"><img src="pg6!.png" alt=""/></a></td>
-      <td><a href="https://xfeehsilva.github.io/web/sobre.htm"><img src="pg2!.png" alt=""/></a></td>
-      <td><a href="https://xfeehsilva.github.io/web/"><img src="pg1!.png" alt=""/></a></td>
-      <td><a href="https://xfeehsilva.github.io/web/trabalhos.htm"><img src="pg3!.png" alt=""/></a></td>
-      <td><a href="https://xfeehsilva.github.io/web/livestreams.htm"><img src="pg4!.png" alt=""/></a></td>
-    </tr>
-    <tr>
-      <td colspan="5" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/lojadepremios.htm"><img src="lp!.png" alt=""/></a></td>
-    </tr>
-    <tr>
-      <td colspan="5" align="center" valign="middle" bgcolor="#FFFFFF">
-        <!-- Aqui começa o conteúdo -->
-        <table border="0" width="100%">
-          <tbody>
-            <tr>
-              <td align="center" valign="middle" bgcolor="#E4E4E4">
-                <table border="0" width="100%">
-                  <tbody>
-                    <tr>
-                      <td align="left" valign="middle" style="font-weight: bold"><img src="atualizar.png" alt=""/></td>
-                    </tr>
-                    <tr>
-                      <td align="center" valign="middle" bgcolor="#727272" style="font-weight: bold; color: #FFFFFF;">18 / 09 (QUINTA-FEIRA)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td align="center" valign="middle" bgcolor="#E4E4E4">
-                <table border="0" width="100%">
-                  <tbody>
-                    <tr>
-                      <td align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold">Sobre o FUTURO das LIVES, e como vai ser daqui para frente</td>
-                    </tr>
-                    <tr>
-                      <td align="center" valign="middle" style="font-weight: bold">
-                        <p>As lives vão passar a ser de SEGUNDA á QUINTA, no mesmo horário de sempre, começando ás 21:00 horas; não eu não vou mais fazer ás sextas por dois motivos: o motivo é de que é o dia da semana com MENOR chance de ter sequer um espectador, e por eu estar envolvida em 4 outros projetos atualmente, mas vamos fazer algo legal aqui:</p>
-                        <p>Eu me comprometo a fazer lives ás SEXTAS-FEIRAS, se até quinta-feira de cada semana, atingirmos a meta de 1.000 KICK's, se isso acontecer, além de termos lives ás sextas, o chat vai adquirir 80 FScoins a cada 5 minutos de live assistidos.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+<div class="page">
+  <table class="responsive-table" border="0" align="center" cellpadding="3" cellspacing="0">
+    <tbody>
+      <tr>
+        <td height="104" colspan="5" align="center" valign="middle">
+          <img class="responsive-img cover" src="capa.png" alt=""/>
+        </td>
+      </tr>
+      <tr class="nav-row">
+        <td width="177" height="32" align="center" valign="middle"><a href="https://discord.com/invite/BhmmnxmBDN"><img class="responsive-img" src="pg6!.png" alt=""/></a></td>
+        <td width="177" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/sobre.htm"><img class="responsive-img" src="pg2!.png" alt=""/></a></td>
+        <td width="177" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/"><img class="responsive-img" src="pg1!.png" alt=""/></a></td>
+        <td width="177" height="32" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/trabalhos.htm"><img class="responsive-img" src="pg3!.png" alt=""/></a></td>
+        <td width="177" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/livestreams.htm"><img class="responsive-img" src="pg4!.png" alt=""/></a></td>
+      </tr>
+      <tr>
+        <td height="32" colspan="5" align="center" valign="middle">
+          <a href="https://xfeehsilva.github.io/web/lojadepremios.htm"><img class="responsive-img" src="lp!.png" alt=""/></a>
+        </td>
+      </tr>
+      <tr>
+        <td height="3079" colspan="5" align="center" valign="middle" bgcolor="#FFFFFF">
+          <table class="responsive-table" border="0">
+            <tbody>
+              <tr>
+                <td height="182" align="center" valign="middle" bgcolor="#E4E4E4">
+                  <table class="responsive-table" border="0">
+                    <tbody>
+                      <tr>
+                        <td height="24" align="left" valign="middle" style="font-weight: bold">
+                          <img class="responsive-img" src="../atualizar.png" alt=""/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="55" align="center" valign="middle" bgcolor="#727272" style="font-weight: bold; color: #FFFFFF;">18 / 09 (QUINTA-FEIRA)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="2748" align="center" valign="middle" bgcolor="#E4E4E4">
+                  <table class="responsive-table" border="0">
+                    <tbody>
+                      <tr>
+                        <td height="50" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold"><span style="font-weight: normal">Sobre o </span> FUTURO das LIVES<span style="font-weight: normal">,</span> <span style="font-weight: normal">e como vai ser daqui para frente</span></td>
+                      </tr>
+                      <tr>
+                        <td height="359" align="center" valign="middle" style="font-weight: bold">
+                          <p style="margin:0 0 10px 0;"><span style="font-weight: normal">As lives vão passar a ser de</span> SEGUNDA <span style="font-weight: normal">á</span> QUINTA<span style="font-weight: normal">, no mesmo horário de sempre, começando ás</span> 21:00 <span style="font-weight: normal">horas; não eu não vou mais fazer ás sextas por dois motivos: o motivo é de que é o dia da semana com MENOR chance de ter sequer um espectador, e por eu estar envolvida em 4 outros projetos atualmente, mas vamos fazer algo legal aqui:</span></p>
+                          <p style="margin:0;"><span style="font-weight: normal">Eu me comprometo a fazer lives ás</span> SEXTAS-FEIRAS<span style="font-weight: normal">, se até quinta-feira de cada semana, atingirmos a meta de </span>1.000 KICK's<span style="font-weight: normal">, se isso acontecer, além de termos lives ás sextas, </span>o chat vai adquirir 80 FScoins <span style="font-weight: normal">a cada</span> 5 minutos <span style="font-weight: normal">de live assistidos.</span></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
 
-                <p style="font-size: 15px">&nbsp;</p>
+                  <p class="spacer">&nbsp;</p>
 
-                <!-- resto do conteúdo igual ao anterior -->
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="5" align="center" valign="middle" bgcolor="#FFFFFF"><strong><a href="https://xfeehsilva.github.io/web/termosecondicoesdeuso.htm">Termos e condições de uso</a></strong></td>
-    </tr>
-  </tbody>
-</table>
+                  <table class="responsive-table" border="0">
+                    <tbody>
+                      <tr>
+                        <td height="50" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold"><span style="font-weight: normal">Sobre a </span><span style="color: #1F8221">LOJA de PRÊMIOS</span></td>
+                      </tr>
+                      <tr>
+                        <td height="122" align="left" valign="middle" style="font-weight: bold">
+                          <p style="margin:0;"><span style="font-weight: normal">A partir de</span> <span style="font-weight: bold; color: #623EDB;">OUTUBRO</span> <span style="font-weight: normal">a cada <span style="font-weight: bold; color: #501EB9;">2 semanas</span></span> <span style="font-weight: normal">as pessoas poderão adquirir um prêmio da loja, o novo sistema vai funcionar da seguinte forma:</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="416" align="left" valign="middle" style="font-weight: bold">
+                          <span style="font-weight: normal">Considerando que de</span> SEGUNDA <span style="font-weight: normal">á</span> QUARTA <span style="font-weight: normal">a cada</span> 5 minutos <span style="font-weight: normal">de live assistidos, a pessoa recebe</span> 20 FScoins<span style="font-weight: normal">, e todas as</span> QUINTAS <span style="font-weight: normal">recebe</span> 40 FScoins<span style="font-weight: normal">, na <span style="font-weight: bold">2º</span> e <span style="font-weight: bold">4º</span> semana de cada mês, mais precisamente na <span style="font-weight: bold">QUINTA-FEIRA</span> da <span style="font-weight: bold">2º</span> e da <span style="font-weight: bold">4º</span> semana de live de cada mês, prêmios de até <span style="font-weight: bold; color: #7213D9;">9.600</span> FScoins poderão ser adquiridos SOMENTE assistindo as lives, prêmios de valores acima disso, para adquirir, será necessário apoiar o canal por meio de <a href="https://xfeehsilva.github.io/web/assinaturas.htm">assinatura</a> ou por meio dos &quot;KICKs&quot;; prêmios de até</span> <span style="color: #7213D9">3.840</span> <span style="font-weight: normal">FScoins, significam que a pessoa poderá deixar de assistir no MÁXIMO</span> 2 lives <span style="font-weight: normal">no período de</span> 2 semanas<span style="font-weight: normal">; considerando que uma das lives perdidas foi em uma quinta-feira, o espectador conseguiria um total de <span style="color: #7213D9"><strong>6.720</strong></span><strong style="font-weight: normal"> FScoins</strong> em 2 semanas; é importante se atentar a isso. <span style="color: #0068B4; font-weight: bold;">O novo sistema significa que será possível adquirir até 2 prêmios por mês !</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="spacer">&nbsp;</p>
+
+                  <table class="responsive-table" border="0">
+                    <tbody>
+                      <tr>
+                        <td height="50" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold"><span style="font-weight: normal">Sobre os </span><span style="color: #1F8221">KICKS<span style="font-weight: normal; color: #000000;">, a nova maneira de apoiar o canal</span></span></td>
+                      </tr>
+                      <tr>
+                        <td height="82" align="center" valign="middle" style="font-weight: bold">
+                          <p style="margin:0;"><span style="font-weight: normal">A partir de</span> <span style="font-weight: bold; color: #623EDB;">01 / 10 (QUARTA-FEIRA)</span> <span style="font-weight: normal">apoiadores <span style="font-weight: bold">MENSAIS</span> que apoiarem o canal com</span> <span style="color: #1F8221">KICKS</span><span style="font-weight: normal">:</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="55" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold">1º lugar (mínimo de <span style="color: #1F8221">2.850 KICKS</span>)</td>
+                      </tr>
+                      <tr>
+                        <td height="55" align="center" valign="middle" style="font-weight: bold"><span style="font-weight: normal">Vale Mequí (<span style="color: #8C8C21; font-weight: bold;">Mc Donald's</span>) no valor de</span> <span style="color: #226E2A">R$ 50,00</span></td>
+                      </tr>
+                      <tr>
+                        <td height="50" align="center" valign="middle" style="font-weight: bold"><span style="font-weight: normal">Giftcard</span> SHOPEE<span style="font-weight: normal"> no valor de <span style="font-weight: bold; color: #22741B;">R$ 80,00</span></span></td>
+                      </tr>
+                      <tr>
+                        <td height="55" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold">2º lugar (mínimo de <span style="color: #1F8221">1.700 KICKS</span>)<span style="text-align: center"></span></td>
+                      </tr>
+                      <tr>
+                        <td height="55" align="center" valign="middle" style="font-weight: bold"><span style="font-weight: normal">Giftcard</span> STEAM <span style="font-weight: normal">ou</span> GOOGLEPLAY <span style="font-weight: normal">(a escolha) no valor de <span style="font-weight: bold; color: #22741B;">R$ 50,00</span></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="spacer">&nbsp;</p>
+
+                  <table class="responsive-table" border="0">
+                    <tbody>
+                      <tr>
+                        <td height="50" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold"><span style="font-weight: normal">Sobre os </span><span style="color: #000000">SUB'S (inscrições)</span></td>
+                      </tr>
+                      <tr>
+                        <td height="62" align="center" valign="middle" style="font-weight: bold"><p style="margin:0;"><span style="font-weight: normal">Sub's agora adquirem</span> <span style="font-weight: bold; color: #623EDB;">3.000</span> <span style="font-weight: normal">FScoins</span></p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="spacer">&nbsp;</p>
+
+                  <table class="responsive-table" border="0">
+                    <tbody>
+                      <tr>
+                        <td height="50" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold"><span style="font-weight: normal">Sobre o sistema de</span> <span style="font-weight: bold">níveis</span></td>
+                      </tr>
+                      <tr>
+                        <td height="359" align="center" valign="middle" style="font-weight: bold">
+                          <p style="margin:0;"><span style="font-weight: normal">A partir de <span style="font-weight: bold; color: #623EDB;">OUTUBRO</span></span><span style="font-weight: normal"></span><span style="font-weight: normal"></span> <span style="font-weight: normal">haverá alteração na premiação de FScoins por níveis; atualmente o 1º lugar em maior nível adquire 500 FScoins e o 2º lugar adquire 250 FScoins, em outubro vai ficar da seguinte forma:</span></p>
+                          <p style="margin:6px 0 0 0;">Na última live de cada mês,</p>
+                          <p style="margin:6px 0 0 0;">1º <span style="font-weight: normal">lugar com maior nível, vai adquirir apenas</span> 100 <span style="font-weight: normal">FScoins</span></p>
+                          <p style="margin:6px 0 0 0;">2º <span style="font-weight: normal">lugar com maior nível, vai adquirir apenas</span> 50 <span style="font-weight: normal">FScoins</span></p>
+                          <p style="margin:6px 0 0 0;">Para quem não sabe como adquirir XP e subir de nível, basta <span style="color: #5818DF">ENVIAR MENSAGENS</span> no chat.</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="spacer">&nbsp;</p>
+
+                  <table class="responsive-table" border="0">
+                    <tbody>
+                      <tr>
+                        <td height="50" align="center" valign="middle" bgcolor="#C6E3E4" style="font-weight: bold">Sobre o sistema de níveis</td>
+                      </tr>
+                      <tr>
+                        <td height="359" align="center" valign="middle" style="font-weight: bold">
+                          <p style="margin:0;">A partir de <span style="font-weight: bold; color: #623EDB;">OUTUBRO</span> haverá alteração na premiação de FScoins por níveis; atualmente o 1º lugar em maior nível adquire 500 FScoins e o 2º lugar adquire 250 FScoins, em outubro vai ficar da seguinte forma:</p>
+                          <p style="margin:6px 0 0 0;">Na última live de cada mês,</p>
+                          <p style="margin:6px 0 0 0;">1º lugar com maior nível, vai adquirir apenas 100 FScoins</p>
+                          <p style="margin:6px 0 0 0;">2º lugar com maior nível, vai adquirir apenas 50 FScoins</p>
+                          <p style="margin:6px 0 0 0;">Para quem não sabe como adquirir XP e subir de nível, basta <span style="color: #5818DF">ENVIAR MENSAGENS</span> no chat.</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="51" colspan="5" align="center" valign="middle" bgcolor="#FFFFFF"><strong><a href="https://xfeehsilva.github.io/web/termosecondicoesdeuso.htm">Termos e condições de uso</a></strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>
