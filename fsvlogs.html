@@ -31,7 +31,7 @@ body {
       <td width="295" align="center" valign="middle"><a href="https://discord.com/invite/BhmmnxmBDN"><img src="pg4!.png" width="295" height="40" alt=""/></a></td>
     </tr>
     <tr>
-      <td height="1597" colspan="3" align="center" bgcolor="#FFFFFF"><table width="835" border="0" align="center" cellpadding="0" cellspacing="3">
+      <td height="2443" colspan="3" align="center" bgcolor="#FFFFFF"><table width="835" border="0" align="center" cellpadding="0" cellspacing="3">
         <tbody>
           <tr>
             <td height="210" colspan="3" align="center" valign="middle"><img src="capasite!.png" width="830" height="210" alt=""/></td>
@@ -42,12 +42,101 @@ body {
             <td width="268" align="center" valign="middle"><a href="https://xfeehsilva.github.io/web/poesias.html"><img src="p2.png" width="268" height="40" alt=""/></a></td>
           </tr>
         </tbody>
-    </table>
+      </table>
         <p style="font-size: 15px">&nbsp;</p>
-        <table width="835" border="0">
+        <table width="835" border="0" align="center" cellpadding="5">
           <tbody>
             <tr>
-              <td height="173" align="center" style="font-size: 40px">MUITO OBRIGADA por adquirir este vídeo</td>
+              <td width="360" height="450" align="center" valign="middle" bgcolor="#ECECEC"> <!-- Player Dailymotion com thumbnail personalizada e botão de play -->
+<div id="dm-container"
+     style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; cursor:pointer; background:#000; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.4);">
+
+  <!-- Thumbnail personalizada -->
+  <img src="thumbnova.png"
+       alt="Clique para assistir"
+       style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:12px;">
+
+  <!-- Botão de play -->
+  <div id="play-button"
+       style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+              width:80px; height:80px; border-radius:50%; background:rgba(0,0,0,0.6);
+              display:flex; align-items:center; justify-content:center; transition:0.3s;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40" fill="#fff">
+      <path d="M16 12v40l36-20z"/>
+    </svg>
+  </div>
+
+  <!-- Iframe do vídeo (inicialmente oculto) -->
+  <iframe id="dm-video"
+          src=""
+          style="position:absolute; top:0; left:0; width:100%; height:100%;
+                 border:none; display:none; border-radius:12px;"
+          allowfullscreen
+          title="Dailymotion Video Player"
+          allow="web-share">
+  </iframe>
+</div>
+
+<script>
+  const container = document.getElementById('dm-container');
+  const iframe = document.getElementById('dm-video');
+  const playBtn = document.getElementById('play-button');
+  const thumb = container.querySelector('img');
+
+  container.addEventListener('click', function() {
+    iframe.src = "https://geo.dailymotion.com/player.html?video=k5ClVZoEHd4gpbE42Bm&autoplay=1";
+    iframe.style.display = "block";
+    thumb.style.display = "none";
+    playBtn.style.display = "none";
+  });
+
+  // Efeito hover no botão de play
+  container.addEventListener('mouseover', () => playBtn.style.background = 'rgba(0,0,0,0.8)');
+  container.addEventListener('mouseout', () => playBtn.style.background = 'rgba(0,0,0,0.6)');
+</script>
+ </td>
+            </tr>
+            <tr>
+              <td height="55" align="center" valign="middle" bgcolor="#C6C4CC"><table width="797" border="0">
+                <tbody>
+                  <tr>
+                    <td width="641" align="center" style="font-size: 30px; color: #8914A3; font-weight: bold;">22 / 10 / 2025 (TERÇA-FEIRA)</td>
+                  </tr>
+                </tbody>
+              </table></td>
+            <tr>
+              <td height="55" align="center" valign="middle" bgcolor="#C6C4CC"><table width="797" border="0">
+                <tbody>
+                  <tr>
+                    <td align="center" style="font-size: 30px"><h5 lang="pt">#VLOG 1 | Persistindo mais uma vez</h5></td>
+                  </tr>
+                </tbody>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="318" align="center" valign="middle" bgcolor="#C6C4CC"><table width="792" border="0">
+                <tr>
+                  <td width="786" height="273" align="center" bgcolor="#EBEBEB" style="font-size: 25px; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-weight: normal;"><form action="https://formsubmit.co/xfeehsilva@gmail.com" method="POST">
+                    <table width="733" border="0" align="center" cellpadding="7">
+                      <tbody>
+                        <tr>
+                          <td width="144" align="center" valign="middle" bgcolor="#D3D3D3">Nome</td>
+                          <td width="555" bgcolor="#D3D3D3"><input name="nome2" type="text" required size="93" id="nome2"></td>
+                        </tr>
+                        <tr>
+                          <td width="144" align="center" valign="middle" bgcolor="#D3D3D3">Mensagem</td>
+                          <td bgcolor="#D3D3D3"><textarea name="Mensagem [FSVlogs - 1]" id="Mensagem [FSVlogs - 1]" rows="6" cols="90" required></textarea></td>
+                        </tr>
+                        <tr>
+                          <td height="59" colspan="2" align="center" bgcolor="#D3D3D3"><button type="submit" style="font-size: 22px; font-weight: bold; color: #3E0B9C;">Enviar</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form></td>
+                </tr>
+                <tbody>
+                </tbody>
+              </table></td>
             </tr>
           </tbody>
         </table>
@@ -56,31 +145,36 @@ body {
           <tbody>
             <tr>
               <td width="360" height="450" align="center" valign="middle" bgcolor="#ECECEC"><!-- Player Dailymotion com thumbnail personalizada e botão de play -->
-                <div id="dm-container2"
+<div id="dm-container2"
      style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; cursor:pointer; background:#000; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.4);">
-                  <!-- Thumbnail personalizada -->
-                  <img src="thumbnova2.png"
+
+  <!-- Thumbnail personalizada -->
+  <img src="thumbnova2.png"
        alt="Clique para assistir"
        style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:12px;">
-                  <!-- Botão de play -->
-                  <div id="play-button2"
+
+  <!-- Botão de play -->
+  <div id="play-button2"
        style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
               width:80px; height:80px; border-radius:50%; background:rgba(0,0,0,0.6);
               display:flex; align-items:center; justify-content:center; transition:0.3s;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40" fill="#fff">
-                      <path d="M16 12v40l36-20z"/>
-                    </svg>
-                  </div>
-                  <!-- Iframe do vídeo (inicialmente oculto) -->
-                  <iframe id="dm-video2"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40" fill="#fff">
+      <path d="M16 12v40l36-20z"/>
+    </svg>
+  </div>
+
+  <!-- Iframe do vídeo (inicialmente oculto) -->
+  <iframe id="dm-video2"
           src=""
           style="position:absolute; top:0; left:0; width:100%; height:100%;
                  border:none; display:none; border-radius:12px;"
           allowfullscreen
           title="Dailymotion Video Player"
-          allow="web-share"> </iframe>
-                </div>
-                <script>
+          allow="web-share">
+  </iframe>
+</div>
+
+<script>
   const container2 = document.getElementById('dm-container2');
   const iframe2 = document.getElementById('dm-video2');
   const playBtn2 = document.getElementById('play-button2');
@@ -96,7 +190,7 @@ body {
   // Efeito hover no botão de play
   container2.addEventListener('mouseover', () => playBtn2.style.background = 'rgba(0,0,0,0.8)');
   container2.addEventListener('mouseout', () => playBtn2.style.background = 'rgba(0,0,0,0.6)');
-                </script></td>
+</script></td>
             </tr>
             <tr>
               <td height="55" align="center" valign="middle" bgcolor="#C6C4CC"><table width="797" border="0">
@@ -115,6 +209,9 @@ body {
                   </tr>
                 </tbody>
               </table></td>
+            </tr>
+            <tr>
+              <td height="27" align="center" valign="middle" bgcolor="#FFFFFF"><a href="https://mpago.la/1FZRBRC"><img src="acessovideo.png" width="825" height="50" alt=""/></a></td>
             </tr>
             <tr>
               <td height="318" align="center" valign="middle" bgcolor="#C6C4CC"><table width="792" border="0">
