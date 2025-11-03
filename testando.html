@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feeh Silva</title>
+    
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    
+    <style>
+        /* 🎨 Estilos Globais e Reset Básico */
+        body {
+            background-color: #C6C4CC;
+            font-size: 1px; /* Mantido, mas estranho */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center; /* Centraliza o main-container */
+        }
+
+        /* 🖼️ Regra Crítica: Imagens 100% Responsivas */
+        img {
+            max-width: 100%; /* Faz a imagem encolher no celular */
+            height: auto; /* Mantém a proporção */
+            display: block;
+        }
+
+        /* ⚙️ Container Principal (Simula a largura fixa de 900px, mas é flexível) */
+        .main-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto; /* Centraliza todo o conteúdo */
+            padding: 1px; /* Simula o cellpadding="1" da tabela principal */
+            background-color: #FFFFFF; /* Fundo branco do conteúdo principal */
+        }
+
+        /* ---------------------------------------------------- */
+        /* 🧭 Menu Principal (3 colunas) */
+        /* ---------------------------------------------------- */
+        .main-menu {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; /* Centraliza os botões */
+            margin: 1px 0;
+        }
+
+        .menu-item {
+            /* Largura total no celular para evitar scroll */
+            width: 100%; 
+            height: 40px; 
+            margin: 1px 0; /* Espaçamento entre os botões empilhados */
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+
+        .menu-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 🖥️ Media Query para Desktop: Volta ao layout de 3 colunas, respeitando as proporções de largura */
+        @media (min-width: 600px) {
+            .menu-item {
+                margin: 0; /* Remove margem extra */
+                width: calc(900px / 3); /* Largura padrão de 300px para desktop */
+                
+                /* Ajustes finos para replicar o original (294px, 294px, 292px) */
+                /* Usaremos 33.33% de largura para simplicidade e responsividade */
+                width: 33.333%; 
+            }
+            /* Se for crucial, pode-se usar CSS Grid para larguras diferentes, mas Flexbox é mais limpo: */
+            /* .main-menu { grid-template-columns: 294px 294px 292px; } */
+        }
+        
+        /* O botão pg1.png estava em uma linha separada */
+        .pg1-button {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 2px;
+        }
+
+
+        /* ---------------------------------------------------- */
+        /* 📢 Rodapé de Ícones Sociais (4 colunas) */
+        /* ---------------------------------------------------- */
+        .social-icons-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Distribui os 4 ícones */
+            padding: 3px 0; /* Simula o cellspacing="3" */
+        }
+
+        .social-icon-item {
+            width: 25%; /* 4 colunas de 25% no desktop */
+            min-width: 20%; /* Ajuste para celular */
+            text-align: center;
+        }
+        
+        /* ---------------------------------------------------- */
+        /* 📝 Termos e Condições */
+        /* ---------------------------------------------------- */
+        .termos-rodape {
+            background-color: #FFFFFF;
+            height: 55px;
+            line-height: 55px; /* Centraliza verticalmente */
+            font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        .termos-rodape a {
+            color: #001DFF;
+            font-size: 25px !important;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main-container">
+
+    <div class="capa">
+        <img src="capa.png" width="900" height="250" alt="Capa Feeh Silva" style="display: block; margin: 0 auto;"/>
+    </div>
+    
+    <div class="pg1-button">
+        <a href="https://xfeehsilva.github.io/web/"><img src="pg1.png" alt="Botão Principal"/></a>
+    </div>
+
+    <nav class="main-menu">
+        <div class="menu-item">
+            <a href="https://xfeehsilva.github.io/web/sobre.html"><img src="pg2.png" alt="Sobre"/></a>
+        </div>
+        <div class="menu-item">
+            <a href="https://xfeehsilva.github.io/web/trabalhos.html"><img src="pg3.png" alt="Trabalhos"/></a>
+        </div>
+        <div class="menu-item">
+            <a href="https://discord.com/invite/BhmmnxmBDN"><img src="pg4!.png" alt="Discord"/></a>
+        </div>
+    </nav>
+    
+    <div style="background-color: #FFFFFF; margin-top: 1px;">
+        <div style="width: 100%; max-width: 830px; margin: 0 auto;">
+            
+            <div style="margin-top: 5px;">
+                <img src="banner.png" alt="Banner"/>
+            </div>
+
+            <div style="background-color: #000000; height: 40px; line-height: 40px; margin-top: 5px; margin-bottom: 5px;">
+                <a href="https://xfeehsilva.github.io/web/galeria.html">
+                    <img src="pgaleria.png" width="830" height="40" alt="Galeria" style="display: inline-block;"/>
+                </a>
+            </div>
+
+            <div class="social-icons-menu">
+                <div class="social-icon-item">
+                    <a href="https://t.me/xFeehSilva"><img src="telegram.png" alt="Telegram"/></a>
+                </div>
+                <div class="social-icon-item">
+                    <img src="discord.png" alt="Discord Icon"/>
+                </div>
+                <div class="social-icon-item">
+                    <a href="https://x.com/xFeehSilva"><img src="xtwitter.png" alt="X/Twitter"/></a>
+                </div>
+                <div class="social-icon-item">
+                    <a href="https://www.threads.com/@xfeehsilva"><img src="threads.png" alt="Threads"/></a>
+                </div>
+            </div>
+            
+            <div style="height: 678px; background-color: #FFFFFF;">
+                &nbsp;
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="termos-rodape">
+        <strong><a href="https://xfeehsilva.github.io/web/termosecondicoesdeuso.html">Termos e condições de uso</a></strong>
+    </div>
+
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>
