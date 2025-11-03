@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feeh Silva</title>
+    
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    
+    <style>
+        /* 🎨 Estilos Globais e Reset Básico */
+        body {
+            background-color: #C6C4CC;
+            /* Mantendo o font-size do body como 1px, mas pode ser problemático para textos normais */
+            font-size: 1px; 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* 🖼️ Regra Crítica: Imagens 100% Responsivas */
+        img {
+            max-width: 100%; /* Faz a imagem encolher no celular */
+            height: auto; /* Mantém a proporção */
+            display: block;
+        }
+
+        /* ⚙️ Container Principal (Simula a largura fixa de 900px, mas é flexível) */
+        .main-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 🧭 Menu Principal (3 colunas) */
+        .main-menu {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            padding: 1px 0; /* Simula o cellpadding="1" */
+        }
+
+        .menu-item {
+            /* Mobile: Um botão por linha para evitar scroll */
+            width: 100%; 
+            height: 40px; 
+            margin-bottom: 2px;
+            text-align: center;
+        }
+
+        .menu-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 🖥️ Media Query para Desktop (3 botões por linha) */
+        @media (min-width: 600px) {
+            .menu-item {
+                /* Divide em 3 colunas, garantindo que caiba */
+                width: calc(33.333% - 2px); /* 1px padding + 1px padding */
+                margin-bottom: 0;
+            }
+        }
+
+        /* 📢 Rodapé de Ícones Sociais (4 colunas) */
+        .social-icons-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #FFFFFF;
+        }
+
+        .social-icon-item {
+            width: 25%; /* 4 colunas de 25% */
+            min-width: 70px; /* Garante que não fiquem muito pequenos, pode ser ajustado */
+            height: auto; 
+            margin: 1px 0;
+            text-align: center;
+        }
+
+        /* Fix para o link do rodapé */
+        .termos-rodape a {
+            font-size: 25px !important; /* Força o tamanho da fonte do link */
+            color: #001DFF;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main-container">
+
+    <div style="width: 100%;" class="capa">
+        <img src="capa.png" alt="Capa Feeh Silva"/>
+    </div>
+    
+    <div style="width: 100%; height: 40px; margin-top: 1px;">
+        <a href="https://xfeehsilva.github.io/web/"><img src="pg1.png" alt="Botão Principal"/></a>
+    </div>
+
+    <nav class="main-menu">
+        <div class="menu-item">
+            <a href="https://xfeehsilva.github.io/web/sobre.html"><img src="pg2.png" alt="Sobre"/></a>
+        </div>
+        <div class="menu-item">
+            <a href="https://xfeehsilva.github.io/web/trabalhos.html"><img src="pg3.png" alt="Trabalhos"/></a>
+        </div>
+        <div class="menu-item">
+            <a href="https://discord.com/invite/BhmmnxmBDN"><img src="pg4!.png" alt="Discord"/></a>
+        </div>
+    </nav>
+    
+    <div style="background-color: #FFFFFF; padding: 5px 0;">
+        <div style="width: 95%; max-width: 830px; margin: 0 auto;">
+            <div style="margin-bottom: 5px;">
+                <img src="banner.png" alt="Banner"/>
+            </div>
+
+            <div style="background-color: #000000; height: 40px; line-height: 40px; margin-bottom: 5px;">
+                <a href="https://xfeehsilva.github.io/web/galeria.html">
+                    <img src="pgaleria.png" alt="Galeria" style="display: inline-block; height: 40px;"/>
+                </a>
+            </div>
+
+            <div class="social-icons-menu">
+                <div class="social-icon-item">
+                    <a href="https://t.me/xFeehSilva"><img src="telegram.png" alt="Telegram"/></a>
+                </div>
+                <div class="social-icon-item">
+                    <img src="discord.png" alt="Discord Icon"/>
+                </div>
+                <div class="social-icon-item">
+                    <a href="https://x.com/xFeehSilva"><img src="xtwitter.png" alt="X/Twitter"/></a>
+                </div>
+                <div class="social-icon-item">
+                    <a href="https://www.threads.com/@xfeehsilva"><img src="threads.png" alt="Threads"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="height: 55px; line-height: 55px; background-color: #FFFFFF;" class="termos-rodape">
+        <strong><a href="https://xfeehsilva.github.io/web/termosecondicoesdeuso.html">Termos e condições de uso</a></strong>
+    </div>
+
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>
